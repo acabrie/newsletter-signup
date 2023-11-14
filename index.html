@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="index.js" defer></script>
+  <title>Newsletter sign-up form</title>
+</head>
+
+<body class="body">
+
+  <main class="wrapper">
+
+    <div class="container">
+
+      <div class="illustration">
+      </div>
+  
+      <div class="content">
+        <h1 class="font-roboto fs-3 text-dsg">Stay updated!</h1>
+  
+        <p class="font-roboto fs-2 text-dsg">Join 60,000+ product managers receiving monthly updates on:</p>
+  
+        <ul class="list">
+          <li class="icon fs-2 font-roboto text-dsg">Product discovery and building what matters</li>
+          <li class="icon fs-2 font-roboto text-dsg">Measuring to ensure updates are a success</li>
+          <li class="icon fs-2 font-roboto text-dsg">And much more!</li>
+        </ul>
+        
+        <form action="#" method="POST" class="form" id="form">
+          <lable for="email" name="email" class="label font-roboto fs-1 text-dsg fw-700">Email Address</lable><p class="error-message font-roboto tomato fs-1 fw-700"></p>
+          <input type="email" id="email" placeholder="email@company.com" onkeydown="validation()">
+        </form>
+  
+        <button type="submit" class="btn" id="button" >Subscribe to monthly newsletter</button>
+  
+      </div>
+
+
+    </div>
+    
+    
+  </main>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <template class="thankyou">
+    <div class="success-container">
+      <img src="./assets/images/icon-success.svg" alt="">
+
+    <h1 class="font-roboto fs-3 text-dsg">Thanks for subscribing!</h1>
+
+    <p class="font-roboto fs-2 text-dsg">A confirmation email has been sent to <span class="fw-700" id="user-email"></span>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+
+    <button type="button" class="btn" id="dismiss-btn" onclick="reloadWindow()">Dismiss message</button>
+    </div>
+
+  </template>
+
+  <!-- Success message end -->
+</body>
+</html>
